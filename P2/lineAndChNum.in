@@ -1,0 +1,11 @@
+// This is a comment
+## So is this
+int main() {
+	long unsigned int student_id_number;
+	cout << "Please enter your 10 digit student id number: ";
+	cin >> student_id_number;
+	int x = abs(int(-student_id_number) / 10) << 1;
+	cout << "Your code is: " << x << endl;
+	return 0;
+}
+// End of program

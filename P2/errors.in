@@ -1,0 +1,6 @@
+123000000000000000000000%# "unterminated string
+abc
+"bad string literal \ " " unterminated bad string literal \ b
+xy
+"unterminated bad string literal that ends with \
+qwe
