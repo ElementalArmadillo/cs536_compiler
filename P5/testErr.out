@@ -1,0 +1,127 @@
+struct P{
+    int a;
+};
+
+struct P p;
+bool f(int a) {
+    return false;
+}
+
+void g() {
+    int a;
+    bool x;
+    cout << (P(struct) + 1);
+    a(int) = ((true + 3) * 4);
+    a(int) = (true && (false || 3));
+    f(int->bool)(("a" * 4));
+    a(int) = (1 + p(P)());
+    a(int) = ((true + 3) == x(bool));
+}
+
+void h() {
+    int a;
+    a(int) = (true + "hello");
+    a(int) = (1 + f(int->bool)(true));
+    a(int) = (1 + f(int->bool)(1, 2));
+    return (3 + true);
+}
+
+int i1;
+int i2;
+bool b1;
+bool b2;
+struct S1{
+    int si;
+    bool sb;
+};
+
+struct S2{
+    int si;
+    bool sb;
+    struct S1 ss;
+};
+
+struct S1 s1;
+struct S2 s2;
+int f1(bool flag1) {
+    return 0;
+}
+
+bool f2(int num1, int num2) {
+    return true;
+}
+
+void f3() {
+    return;
+}
+
+void err_fn1() {
+    cout << f1(bool->int);
+    cout << S1(struct);
+    cout << s1(S1);
+    cout << f3(->void)();
+    cin >> f2(int,int->bool);
+    cin >> S2(struct);
+    cin >> s2(S2).ss(S1);
+    i1(int)(1, 2, 3);
+    f1(bool->int)(1, 2);
+    f2(int,int->bool)(true, false);
+    return 12;
+    i2(int) = (i1(int) + b1(bool));
+    i2(int) = (b1(bool) - b2(bool));
+    i1(int) = (s1(S1) * i2(int));
+    i2(int) = (S1(struct) / f1(bool->int)(true));
+    s1(S1).si(int) = (-b1(bool));
+    f1(bool->int)++;
+    s2(S2)--;
+    b2(bool) = (i1(int) < b1(bool));
+    b2(bool) = (b1(bool) > b2(bool));
+    b1(bool) = (s1(S1) >= i2(int));
+    b1(bool) = (S1(struct) <= f1(bool->int)(true));
+    b1(bool) = (!i1(int));
+    b2(bool) = (b1(bool) && i2(int));
+    b1(bool) = (f1(bool->int) || s1(S1));
+    if (i1(int)) {
+        return 10;
+    }
+    else {
+        return 1;
+    }
+    while (f3(->void)) {
+    }
+    repeat (b2(bool)) {
+    }
+    b1(bool) = (i1(int) == true);
+    b2(bool) = (f3(->void)() == f3(->void)());
+    b1(bool) = (f1(bool->int) != f2(int,int->bool));
+    b2(bool) = (S1(struct) != S2(struct));
+    b1(bool) = (s1(S1) == s2(S2));
+    s1(S1).si(int) = "Hello";
+    f2(int,int->bool) = f3(->void);
+    S1(struct) = S2(struct);
+    s1(S1) = s2(S2);
+}
+
+int err_fn2() {
+    return;
+    return true;
+    if (true) {
+        return;
+        return true;
+    }
+    while (false) {
+        i1(int) = (s1(S1) + S2(struct));
+        i1(int) = (i2(int) - f3(->void)(i1(int)));
+        b1(bool) = (true < false);
+        b2(bool) = (f1(bool->int)(1) > f3(->void)(8));
+        return (f3(->void)(i1(int)) <= f2(int,int->bool)(true, false));
+    }
+    repeat (3) {
+        if (true) {
+            b2(bool) = ((((!i1(int)) && b2(bool)) && S1(struct)) || s2(S2).ss(S1).sb(bool));
+            b1(bool) = ((true == 3) == (false == 4));
+            i1(int) = (((((((i2(int) + 5) + s1(S1)) + S2(struct)) + f1(bool->int)) + s2(S2).ss(S1).si(int)) + f1(bool->int)(true)) + f3(->void)());
+        }
+    }
+}
+

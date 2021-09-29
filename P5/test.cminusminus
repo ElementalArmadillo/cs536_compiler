@@ -1,0 +1,15 @@
+void f1(int x, int y) {
+int x;
+x = 0;
+  if (x != 1) {
+    int y;
+    int x;
+    int y;
+    y = x;
+    x = y - 1;
+    if (y == 3) {
+      return;
+    }
+    y = 1;
+  }
+}

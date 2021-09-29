@@ -1,0 +1,166 @@
+// --------------- Example Input ---------------
+struct P {
+  int a;
+};
+struct P p;
+bool f(int a){
+  return false;
+}
+
+void g() {
+  int a;
+  bool x;
+  cout << P + 1;         // P + 1 is an error; the write is OK
+  a = (true + 3) * 4;        // true + 3 is an error; the * is OK
+  a = true && (false || 3);   // false || 3 is an error; the && is OK
+  f("a" * 4);            // "a" * 4 is an error; the call is OK
+  a = 1 + p();               // p() is an error; the + is OK
+  a = (true + 3) == x;       // true + 3 is an error; the == is OK
+                       // regardless of the type of x
+}
+
+void h() {
+  int a;
+  a = true + "hello";    // one error for each of the non-int operands of the +
+  a = 1 + f(true);       // one for the bad arg type and one for the 2nd operand of the +
+  a = 1 + f(1, 2);       // one for the wrong number of args and one for the 2nd operand of the +
+  return 3+true;    // in a void function: one error for the 2nd operand to +
+                      // and one for returning a value
+}
+
+// --------------- My Test Input ---------------
+int i1;
+int i2;
+
+bool b1;
+bool b2;
+
+struct S1 {
+  int si;
+  bool sb;
+};
+
+struct S2 {
+  int si;
+  bool sb;
+  struct S1 ss;
+};
+
+struct S1 s1;
+struct S2 s2;
+
+int f1(bool flag1){
+  return 0;
+}
+
+bool f2(int num1, int num2){
+  return true;
+}
+
+void f3(){
+  return;
+}
+
+void err_fn1() {
+  // Write errors
+  cout << f1;
+  cout << S1;
+  cout << s1;
+  cout << f3();
+
+  // Read errors
+  cin >> f2;
+  cin >> S2;
+  cin >> s2.ss;
+
+  // Function call errors
+  i1(1,2,3);
+  f1(1,2);
+  f2(true, false);
+
+  // Returning a value from a void function
+  return 12;
+
+  // Arithmetic operator errors
+  i2 = i1 + b1;
+  i2 = b1 - b2;
+  i1 = s1 * i2;
+  i2 = S1 / f1(true);
+  s1.si = -b1;
+  f1++;
+  s2--;
+
+  // Relational operator errors
+  b2 = i1 < b1;
+  b2 = b1 > b2;
+  b1 = s1 >= i2;
+  b1 = S1 <= f1(true);
+
+  // Logical operator errors
+  b1 = !i1;
+  b2 = b1 && i2;
+  b1 = f1 || s1;
+
+  // Non bool if condition
+  if (i1) {
+    // Return value inside if scope
+    return 10;
+  } else {
+    // Return value inside else scope
+    return 1;
+  }
+
+  // Non bool while condition
+  while (f3) {
+  }
+
+  // Non int repeat expression
+  repeat (b2) {
+  }
+
+  // Equality errors
+  b1 = i1 == true;
+  b2 = f3() == f3();
+  b1 = f1 != f2;
+  b2 = S1 != S2;
+  b1 = s1 == s2;
+
+  // Assignment errors
+  s1.si = "Hello";
+  f2 = f3;
+  S1 = S2;
+  s1 = s2;
+}
+
+int err_fn2() {
+  // Returning from a non-void function with a plain return statement
+  return;
+
+  // Returning a value of the wrong type from a non-void function
+  return true;
+
+  if (true) {
+    // Return inside if scope
+    return;
+    return true;
+  }
+
+  while (false) {
+    // Multi error lines
+    i1 = s1 + S2;
+    i1 = i2 - f3(i1);
+
+    b1 = true < false;
+    b2 = f1(1) > f3(8);
+    return f3(i1) <= f2(true,false);
+  }
+
+  repeat (3) {
+    if (true) {
+      // More errors
+      b2 = !i1 && b2 && S1 || s2.ss.sb;
+      b1 = (true == 3) == (false == 4);
+      i1 = i2 + 5 + s1 + S2 + f1 + s2.ss.si + f1(true) + f3();
+    }
+  }
+}

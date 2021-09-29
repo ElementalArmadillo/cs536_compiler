@@ -1,0 +1,16 @@
+void f1(int x, int y) {
+    int x;
+    x(int) = 0;
+    if ((x(int) != 1)) {
+        int y;
+        int x;
+        int y;
+        y(int) = x(int);
+        x(int) = (y(int) - 1);
+        if ((y(int) == 3)) {
+            return;
+        }
+        y(int) = 1;
+    }
+}
+
