@@ -1,0 +1,12 @@
+ void f1(int x, int y) {
+    if (x != 1) {
+        int y = x;
+        int x = y - 1;
+        if (y == 3) return;
+
+       int y = 1;
+
+   }
+
+    int x = 0;
+}
